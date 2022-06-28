@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>シュレ猫 [お問い合わせ]</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="image/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="image/favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="image/favicon/safari-pinned-tab.svg" color="#ff7f50">
+    <link rel="shortcut icon" href="image/favicon/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="stylesheet.css">
+    <meta name="msapplication-TileColor" content="#ff7f50">
+    <meta name="msapplication-config" content="image/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="label.css">
+    <script type="text/javascript" src="javaScript/checkInquiry.js"></script>
+  </head>
+  <body>
+    <h1 id="title"></h1>
+    <img src="image/header.png" alt="header_image" id="header">
+    <ul id="nav">
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="member.html">メンバ</a></li>
+      <li><a href="blog.html">ブログ</a></li>
+    </ul>
+    <h2 class="sub_title">お問い合わせ</h2><br>
+    <div class="content">
+      <div id="formWrapper">
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSfSBHWoqOW9FqLXs6chNLuznWSbvjsPOJIO8MHVEXNSwtPvig/formResponse" method="post" name="myForm" target="dummyIframe">
+          <p>こちらでお問い合わせ内容を送ることができます。</p>
+          <p>以下の項目を入力して送信ボタンを押してください。</p>
+          <p><br></p>
+          <div>
+            <label>キャラクタ名<span class="label label_red">必須</span><br></label>
+            <input name="entry.189874138" id="characterNameForm" placeholder="キャラクタ名をご入力ください。" required="required" style="width:50%;" type="text">
+            <p><br></p>
+          </div>
+          <div>
+            <label>お問い合わせ内容<span class="label label_red">必須</span><br></label>
+            <textarea name="entry.875781179" id="inquiryForm" placeholder="お問い合わせ内容をご入力ください。" required="required" style="height:64px; width:50%;"></textarea>
+          </div>
+          <input value="送信" onclick="checkSubmit()" type="submit">
+          <p><br></p>
+        </form>
+        <iframe name="dummyIframe" style="display:none;"></iframe>
+      </div>
+      <div id="thxMessage" style="display:none;">
+        <p>お問い合わせありがとうございました。</p>
+        <p>管理者が確認するまでお待ちください。</p>
+        <p><br></p>
+      </div>
+    </div>
+    <div id="footer"> <br>
+      <p>© 2021 KanzakiRei</p>
+      <br>
+    </div>
+  </body></html>

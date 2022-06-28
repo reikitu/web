@@ -1,0 +1,7 @@
+html, body, .content {
+  height: calc(100% - 46px);
+}
+
+iframe.twitter-timeline {
+    width: 1000px !important;
+}
