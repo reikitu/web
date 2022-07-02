@@ -6,6 +6,8 @@
 配信スケジュールを表示する。  
 スプレッドシートで変更を行う。  
 Date、Tag、Title、Message、ImageID
+## inquiry.html
+お問い合わせ  
 ## member.html
 メンバのアイコンやバナーを表示する。  
 デザインは共通
