@@ -17,25 +17,33 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <script type="text/javascript" src="javaScript/updateHistoryListLoader.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/loading.css">
   </head>
   <body>
-    <h1 id="title"></h1>
-    <img src="image/header.png" alt="header_image" id="header">
-    <ul id="nav">
-      <li><span>ホーム</span></li>
-      <li><a href="member.html">メンバ</a></li>
-      <li><a href="blog.html">ブログ</a></li>
-    </ul>
-    <h2 class="sub_title">ホーム</h2><br>
-    <div class="content">
-      <p>仮</p>
-      <p><br></p>
+    <div id="splash">
+      <div id="splash_logo"><img src="img/loading.svg" alt="" class="fadeUp"></div><!--画像部分は適宜差し換えてください-->
     </div>
-    <div id="updateHistoryList"></div>
-    <div id="footer">
-      <div class="button_menu"><br>
-        <a href="inquiry.html"><div class="header_button">お問い合わせ</div></a>
-      </div><br>
-      <p>© 2021 KanzakiRei</p><br>
+    <div id="container">
+      <h1 id="title"></h1>
+      <img src="image/header.png" alt="header_image" id="header">
+      <ul id="nav">
+        <li><span>ホーム</span></li>
+        <li><a href="member.html">メンバ</a></li>
+        <li><a href="blog.html">ブログ</a></li>
+      </ul>
+      <h2 class="sub_title">ホーム</h2><br>
+      <div class="content">
+        <p>仮</p>
+        <p><br></p>
+      </div>
+      <div id="updateHistoryList"></div>
+      <div id="footer">
+        <div class="button_menu"><br>
+          <a href="inquiry.html"><div class="header_button">お問い合わせ</div></a>
+        </div><br>
+        <p>© 2021 KanzakiRei</p><br>
+      </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/loading.js"></script>
   </body></html>
