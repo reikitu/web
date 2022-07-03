@@ -3,13 +3,12 @@
 	req.open("get", "https://script.google.com/macros/s/AKfycbyb_DTouvJUwprOABBc6E9SJFzQOo9xdUZ_pFn-bj9b5M7MfzxcZfTB-scFPZx_-2wW/exec?type=syureneko", true);
 	req.send();
 	req.onreadystatechange = function () {
-		// サーバーからのレスポンスが完了し、かつ、通信が正常に終了した場合
 		if (req.readyState == 4 && req.status == 200) {
 			let json = JSON.parse(req.responseText);
 			createMemberList(json);
-			createComment(json.length);
+			loadingCompleted();
 		}
-	}
+	};
 }
 
 function createMemberList(_jsonText) {
@@ -59,13 +58,6 @@ function createPanel(_parent, _name, _path) {
 		img.src = "image/character/" + _path;
 		imgDiv.appendChild(img);
 	}
-}
-
-function createComment(_count) {
-	let target = document.getElementById("comment");
-	let p = document.createElement("p");
-	p.textContent = "現在チームメンバは" + _count + "人です。";
-	target.appendChild(p);
 }
 
 loadJson();
