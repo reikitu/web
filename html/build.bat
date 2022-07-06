@@ -10,8 +10,8 @@ for %%f in (*.html) do (
     if not ERRORLEVEL 1 ( 
       set key=%%t
       setlocal enabledelayedexpansion
-      set key=!Key:*include(=!
-      set key=!key:^);=!
+      set key=!Key:^<^!--include =!
+      set key=!key:--^>=!
       echo include !key!
       for /f "delims=" %%i in (!key!) do (
         echo %%i>>../%%f
