@@ -55,7 +55,7 @@ function createPanel(_parent, _name, _path) {
 		imgDiv.classList.add("character_image");
 		panel.appendChild(imgDiv);
 		let img = document.createElement("img");
-		img.src = "image/character/" + _path;
+		img.src = "img/character/" + _path;
 		imgDiv.appendChild(img);
 	}
 }
