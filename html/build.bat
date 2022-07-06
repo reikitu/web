@@ -1,7 +1,7 @@
 @echo off
-cd %~dp0
+chcp 65001 > nul
+cd %~dp0 > nul
 
-setlocal enabledelayedexpansion
 for %%f in (*.html) do (
   echo %%f
   type nul > ../%%f
@@ -9,17 +9,20 @@ for %%f in (*.html) do (
     echo "%%t" | find "include" > nul
     if not ERRORLEVEL 1 ( 
       set key=%%t
+      setlocal enabledelayedexpansion
       set key=!Key:*include(=!
-      set key=!key:^);*=!
+      set key=!key:^);=!
       echo include !key!
-      type !key! >> ../%%f
-rem      for /f "delims=" %%i in (!key!) do (
-rem        echo %%i >> ../%%f
-rem      )
+      for /f "delims=" %%i in (!key!) do (
+        echo %%i>>../%%f
+      )
+      endlocal
     ) else (
-      set path
-      echo %%t:../= >> ../%%f
+      set dirfix=%%t
+      setlocal enabledelayedexpansion
+      set dirfix=!dirfix:../=!
+      echo !dirfix!>>../%%f
+      endlocal
     )
   )
 )
-endlocal
