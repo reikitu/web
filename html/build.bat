@@ -12,9 +12,10 @@ for %%f in (*.html) do (
       set key=!Key:*include(=!
       set key=!key:^);*=!
       echo include !key!
-      for /f "delims=" %%i in (!key!) do (
-        echo %%i >> ../%%f
-      )
+      type !key! >> ../%%f
+rem      for /f "delims=" %%i in (!key!) do (
+rem        echo %%i >> ../%%f
+rem      )
     ) else (
       echo %%t >> ../%%f
     )
