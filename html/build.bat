@@ -1,5 +1,4 @@
 @echo off
-
 cd %~dp0
 
 for %%f in (*.html) do (
@@ -8,6 +7,7 @@ for %%f in (*.html) do (
   for /f "delims=" %%t in (%%f) do (
     echo "%%t" | find "include" > nul
     if not ERRORLEVEL 1 (
+      setlocal enabledelayedexpansion
       set key=%%t
       set key=!Key:*include(=!
       set key=!key:^);*=!
@@ -15,6 +15,7 @@ for %%f in (*.html) do (
       for /f "delims=" %%i in (!key!) do (
         echo %%i >> ../%%f
       )
+      endlocal
     ) else (
       echo %%t >> ../%%f
     )
