@@ -17,7 +17,8 @@ rem      for /f "delims=" %%i in (!key!) do (
 rem        echo %%i >> ../%%f
 rem      )
     ) else (
-      echo %%t >> ../%%f
+      set path
+      echo %%t:../= >> ../%%f
     )
   )
 )
