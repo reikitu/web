@@ -2,14 +2,14 @@
 chcp 65001 > nul
 cd %~dp0 > nul
 
-for %%f in (*.html) do call :main_file %%f
+for %%f in (*.html) do call :MainFile %%f
 exit /b
 
-:main_file
+:MainFile
 echo %1
-set MAIN_FILE_NAME=%1
-type nul>../%MAIN_FILE_NAME%
-for /f "delims=" %%t in (%MAIN_FILE_NAME%) do (
+set mainFileName=%1
+type nul>../%mainFileName%
+for /f "delims=" %%t in (%mainFileName%) do (
   echo "%%t" | find "include" > nul
   if not ERRORLEVEL 1 (
     set key=%%t
@@ -25,7 +25,7 @@ exit /b
 :include_file
 echo include %1
 for /f "delims=" %%i in (%1) do (
-    echo %%i>>../%MAIN_FILE_NAME%
+    echo %%i>>../%mainFileName%
 )
 exit /b
 
