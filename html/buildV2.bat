@@ -14,39 +14,26 @@ for /f "delims=" %%t in (%mainFileName%) do (
   if not ERRORLEVEL 1 (
     set key=%%t
     setlocal enabledelayedexpansion
-    set key=!Key:^<^!--include =!
+    set key=!key:^<^!--include =!
     set key=!key:--^>=!
-    call :include_file !key!
+    call :IncludeFile !key!
     endlocal
   ) else (
+    set dirFix=%1
+    setlocal enabledelayedexpansion
+    set dirFix=!dirFix:../=!
+    call :Include !dirFix!
+    endlocal
   )
 )
 exit /b
 
-:include_file
+:IncludeFile
 echo include %1
 for /f "delims=" %%i in (%1) do (
     echo %%i>>../%mainFileName%
 )
 exit /b
 
-:main_container
-echo "%1" | find "include" > nul
-if not ERRORLEVEL 1 ( 
-  set key=%1
-  setlocal enabledelayedexpansion
-  set key=!Key:^<^!--include =!
-  set key=!key:--^>=!
-  echo include !key! it
-  for /f "delims=" %%i in (!key!) do (
-    echo %%i>>../%%f
-  )
-  endlocal
-) else (
-  set dirfix=%1
-  setlocal enabledelayedexpansion
-  set dirfix=!dirfix:../=!
-  echo !dirfix!>>../%%f
-  endlocal
-)
+:Include
 exit /b
