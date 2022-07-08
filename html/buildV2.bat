@@ -17,6 +17,7 @@ for /f "delims=" %%t in (%mainFileName%) do (
     set key=!Key:^<^!--include =!
     set key=!key:--^>=!
     call :include_file !key!
+    endlocal
   ) else (
   )
 )
