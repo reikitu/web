@@ -61,11 +61,11 @@ exit /b
 :Include
 type nul>../%mainFileName%
 echo %1>>../%mainFileName%
-echo "%%t" | find "<head>" > nul
+echo "%1" | find "<head>" > nul
 if not ERRORLEVEL 1 (
   echo %head%>>../%mainFileName%
 )
-echo "%%t" | find "<body>" > nul
+echo "%1" | find "<body>" > nul
 if not ERRORLEVEL 1 (
   echo %body%>>../%mainFileName%
 )
