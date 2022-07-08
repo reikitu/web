@@ -3,12 +3,15 @@ chcp 65001 > nul
 cd %~dp0 > nul
 
 for %%f in (*.html) do call :MainFile %%f
+del head.tmp body.tmp
 exit /b
 
 :MainFile
 echo %1
-set mainFileName=%1
-for /f "delims=" %%t in (%mainFileName%) do (
+type nul>head.tmp
+type nul>body.tmp
+type nul>../%1
+for /f "delims=" %%t in (%1) do (
   echo "%%t" | find "include" > nul
   if not ERRORLEVEL 1 (
     set key=%%t
@@ -21,52 +24,32 @@ for /f "delims=" %%t in (%mainFileName%) do (
     set dirFix=%%t
     setlocal enabledelayedexpansion
     set dirFix=!dirFix:../=!
-    call :Include !dirFix!
+    echo "!dirFix!" | find "</body>" > nul
+    if not ERRORLEVEL 1 type body.tmp>>../%1
+    echo !dirFix!>>../%1
+    echo "!dirFix!" | find "<head>" > nul
+    if not ERRORLEVEL 1 type head.tmp>>../%1
     endlocal
+    echo|set /p="."
   )
 )
+echo;
 exit /b
 
 :IncludeFile
-echo include %1
-set isHead=false
-set isBody=false
-for /f "delims=" %%t in (%1) do (
-  echo "%%t" | find "</head>" > nul
-  if not ERRORLEVEL 1 (
-    set isHead=false
-  )
-  echo "%%t" | find "</body>" > nul
-  if not ERRORLEVEL 1 (
-    set isBody=false
-  )
+echo #include %1
+for /f "delims=" %%i in (%1) do (
+  echo "%%i" | find "</head>" > nul
+  if not ERRORLEVEL 1 set isHead=0
+  echo "%%i" | find "</body>" > nul
+  if not ERRORLEVEL 1 set isBody=0
   setlocal enabledelayedexpansion
-  if !isHrad!==true (
-    set head=!head!%%t
-  ) else if !isBody!==true (
-    set body=!body!%%t
-  )
+  if !isHead! equ 1 echo %%i>>head.tmp
+  if !isBody! equ 1 echo %%i>>body.tmp
   endlocal
-  echo "%%t" | find "<head>" > nul
-  if not ERRORLEVEL 1 (
-    set isHead=true
-  )
-  echo "%%t" | find "<body>" > nul
-  if not ERRORLEVEL 1 (
-    set isBody=true
-  )
-)
-exit /b
-
-:Include
-type nul>../%mainFileName%
-echo %1>>../%mainFileName%
-echo "%1" | find "<head>" > nul
-if not ERRORLEVEL 1 (
-  echo %head%>>../%mainFileName%
-)
-echo "%1" | find "<body>" > nul
-if not ERRORLEVEL 1 (
-  echo %body%>>../%mainFileName%
+  echo "%%i" | find "<head>" > nul
+  if not ERRORLEVEL 1 set isHead=1
+  echo "%%i" | find "<body>" > nul
+  if not ERRORLEVEL 1 set isBody=1
 )
 exit /b
