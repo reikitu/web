@@ -18,7 +18,7 @@ for /f "delims=" %%t in (%mainFileName%) do (
     call :IncludeFile !key!
     endlocal
   ) else (
-    set dirFix=%1
+    set dirFix=%%t
     setlocal enabledelayedexpansion
     set dirFix=!dirFix:../=!
     call :Include !dirFix!
