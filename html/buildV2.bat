@@ -8,7 +8,6 @@ exit /b
 :MainFile
 echo %1
 set mainFileName=%1
-type nul>../%mainFileName%
 for /f "delims=" %%t in (%mainFileName%) do (
   echo "%%t" | find "include" > nul
   if not ERRORLEVEL 1 (
@@ -36,4 +35,6 @@ for /f "delims=" %%i in (%1) do (
 exit /b
 
 :Include
+type nul>../%mainFileName%
+echo %1>>../%mainFileName%
 exit /b
