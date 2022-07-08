@@ -32,34 +32,35 @@ echo include %1
 set isHead=false
 set isBody=false
 for /f "delims=" %%t in (%1) do (
-    echo "%%t" | find "<head>" > nul
-    if not ERRORLEVEL 1 (
-      set isHead=true
-    )
-    echo "%%t" | find "<body>" > nul
-    if not ERRORLEVEL 1 (
-      set isBody=true
-    )
-    echo "%%t" | find "</head>" > nul
-    if not ERRORLEVEL 1 (
-      set isHead=false
-    )
-    echo "%%t" | find "</body>" > nul
-    if not ERRORLEVEL 1 (
-      set isBody=false
-    )
-    setlocal enabledelayedexpansion
-    if !isHrad!==true (
-      set head=!head!%%t
-    ) else if !isBody!==true (
-      set body=!body!%%t
-    )
-    endlocal
+  echo "%%t" | find "</head>" > nul
+  if not ERRORLEVEL 1 (
+    set isHead=false
+  )
+  echo "%%t" | find "</body>" > nul
+  if not ERRORLEVEL 1 (
+    set isBody=false
+  )
+  setlocal enabledelayedexpansion
+  if !isHrad!==true (
+    set head=!head!%%t
+  ) else if !isBody!==true (
+    set body=!body!%%t
+  )
+  endlocal
+  echo "%%t" | find "<head>" > nul
+  if not ERRORLEVEL 1 (
+    set isHead=true
+  )
+  echo "%%t" | find "<body>" > nul
+  if not ERRORLEVEL 1 (
+    set isBody=true
+  )
 )
 exit /b
 
 :Include
 type nul>../%mainFileName%
+echo %1>>../%mainFileName%
 echo "%%t" | find "<head>" > nul
 if not ERRORLEVEL 1 (
   echo %head%>>../%mainFileName%
@@ -68,5 +69,4 @@ echo "%%t" | find "<body>" > nul
 if not ERRORLEVEL 1 (
   echo %body%>>../%mainFileName%
 )
-echo %1>>../%mainFileName%
 exit /b
