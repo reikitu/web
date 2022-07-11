@@ -1,14 +1,16 @@
-body {
+body, body::after {
   background-color: #cce4ff;
 }
 
 body::after {
-  background-color: #cce4ff;
+  content: "";
   display: block;
   width: 100%;
-  height: 100%;
+  height: 50%;
   position: fixed;
-  z-index: -2;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 .bg::before {
