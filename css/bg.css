@@ -1,6 +1,9 @@
-body {
+body, body::after {
   background-color: #cce4ff;
-  height: auto;
+}
+
+body::before {
+  background-color: #ffd9fe;
 }
 
 .bg::before {
