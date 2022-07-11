@@ -1,3 +1,7 @@
+body {
+  background-color: #cce4ff
+}
+
 .bg::before {
   background: linear-gradient(170deg, #ffd9fe 0%, #ffd9fe 50%, #cce4ff 50%, #cce4ff 100%);
   background-position: center;
