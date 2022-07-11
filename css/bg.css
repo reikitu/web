@@ -1,9 +1,17 @@
-body, body::after {
-  background-color: #cce4ff;
+body::before, body::after {
+  position: fixed;
+  height: 100%;
+  z-index: -2;
 }
 
 body::before {
   background-color: #ffd9fe;
+  top: 0;
+}
+
+body::after {
+  background-color: #cce4ff;
+  bottom: 0;
 }
 
 .bg::before {
