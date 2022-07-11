@@ -1,5 +1,6 @@
 body {
-  background-color: #cce4ff
+  background-color: #cce4ff;
+  height: auto;
 }
 
 .bg::before {
