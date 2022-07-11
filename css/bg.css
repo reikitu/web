@@ -1,5 +1,13 @@
-body {
+.bg::before {
   background: linear-gradient(170deg, #ffd9fe 0%, #ffd9fe 50%, #cce4ff 50%, #cce4ff 100%);
+  background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-size: cover;
+  content: "";
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
 }
