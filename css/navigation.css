@@ -1,63 +1,56 @@
-.bar {
-    background:#ffffff;
-    cursor: pointer;
-    position: fixed;
-    width: 100%;
-    height:50px;
-    top: 0;
-    right: 0;
-    z-index: 30;
+.bar, .openbtns {
+  background:#ffffff;
+  cursor: pointer;
+  position: fixed;
+  width: 100%;
+  height:50px;
+  top: 0;
+  right: 0;
+  z-index: 30;
 }
 
-.openbtn{
-    position: fixed;
-    background:#666666;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    top: 0;
-    right: 0;
-    border-radius: 5px;
-    z-index: 30;
+.openbtns{
+  width: 50px;
 }
 
 .openbtn span{
-    display: inline-block;
-    transition: all .4s;
-    position: absolute;
-    left: 14px;
-    height: 3px;
-    border-radius: 2px;
-	background: #fff;
-  	width: 45%;
-  }
+  display: inline-block;
+  transition: all .4s;
+  position: absolute;
+  background:#666666;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background: #fff;
+  width: 45%;
+}
 
 .openbtn span:nth-of-type(1) {
-	top:15px;	
+  top:15px;	
 }
 
 .openbtn span:nth-of-type(2) {
-	top:23px;
+  top:23px;
 }
 
 .openbtn span:nth-of-type(3) {
-	top:31px;
+  top:31px;
 }
 
 .openbtn.active span:nth-of-type(1) {
-    top: 18px;
-    left: 18px;
-    transform: translateY(6px) rotate(-45deg);
-    width: 30%;
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
 }
 
 .openbtn.active span:nth-of-type(2) {
-	opacity: 0;
+  opacity: 0;
 }
 
 .openbtn.active span:nth-of-type(3){
-    top: 30px;
-    left: 18px;
-    transform: translateY(-6px) rotate(45deg);
-    width: 30%;
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
 }
