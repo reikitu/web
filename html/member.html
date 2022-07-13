@@ -2,32 +2,21 @@
 <!--include library/bg.html-->
 <!--include library/navigation.html-->
 <!--include library/footer.html-->
+<!--include library/loading.html-->
 <!DOCTYPE html>
 <html>
 <head>
   <title>REIKITU MEMBER</title>
   <link type="text/css" rel="stylesheet" href="../css/member.css">
   <link type="text/css" rel="stylesheet" href="../css/articleList.css">
-  <link type="text/css" rel="stylesheet" href="../css/loading.css">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="../js/loading.js"></script>
   <script src="../js/memberListLoader.js"></script>
 </head>
 <body>
-  <div id="splash">
-    <div id="splash_logo"><img src="../img/loading.svg" alt="" class="fadeUp"></div>
-  </div>
-  <div id="container">
-    <h1 id="title"></h1>
-    <img src="../img/header.png" alt="header_image" id="header">
-    <ul id="nav">
-      <li><a href="../index.html">ホーム</a></li>
-      <li><span>メンバ</span></li>
-      <li><a href="../blog.html">ブログ</a></li>
-    </ul>
+  <main>
     <h2 class="sub_title">チームメンバ紹介</h2><br>
     <div id="memberList"></div>
-  </div>
+  </main>
   <footer>
   </footer>
 </body>

@@ -10,6 +10,7 @@ exit /b
 echo %1
 type nul>head.tmp
 type nul>body.tmp
+type nul>main.tmp
 type nul>footer.tmp
 type nul>../%1
 for /f "delims=" %%t in (%1) do (
@@ -30,6 +31,8 @@ for /f "delims=" %%t in (%1) do (
     if not ERRORLEVEL 1 type head.tmp>>../%1
     echo "!dirFix!" | find "<body>" > nul
     if not ERRORLEVEL 1 type body.tmp>>../%1
+    echo "!dirFix!" | find "<main>" > nul
+    if not ERRORLEVEL 1 type main.tmp>>../%1
     echo "!dirFix!" | find "<footer>" > nul
     if not ERRORLEVEL 1 type footer.tmp>>../%1
     endlocal
@@ -50,15 +53,22 @@ for /f "delims=" %%i in (%1) do (
       if not ERRORLEVEL 1 (set tag=body) else (
         echo "%%i" | find "</body>" > nul
         if not ERRORLEVEL 1 (set tag=0) else (
-          echo "%%i" | find "<footer>" > nul
-          if not ERRORLEVEL 1 (set tag=footer) else (
-            echo "%%i" | find "</footer>" > nul
+          echo "%%i" | find "<main>" > nul
+          if not ERRORLEVEL 1 (set tag=main) else (
+            echo "%%i" | find "</main>" > nul
             if not ERRORLEVEL 1 (set tag=0) else (
-              setlocal enabledelayedexpansion
-              if !tag! == head echo %%i>>head.tmp
-              if !tag! == body echo %%i>>body.tmp
-              if !tag! == footer echo %%i>>footer.tmp
-              endlocal
+              echo "%%i" | find "<footer>" > nul
+              if not ERRORLEVEL 1 (set tag=footer) else (
+                echo "%%i" | find "</footer>" > nul
+                if not ERRORLEVEL 1 (set tag=0) else (
+                  setlocal enabledelayedexpansion
+                  if !tag! == head echo %%i>>head.tmp
+                  if !tag! == body echo %%i>>body.tmp
+                  if !tag! == main echo %%i>>main.tmp
+                  if !tag! == footer echo %%i>>footer.tmp
+                  endlocal
+                )
+              )
             )
           )
         )
