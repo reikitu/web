@@ -24,6 +24,10 @@
   width: 45%;
 }
 
+.openbtn div {
+  display: none;
+}
+
 .openbtn span:nth-of-type(1) {
   top: 15px;
 }
@@ -34,6 +38,10 @@
 
 .openbtn span:nth-of-type(3) {
   top: 31px;
+}
+
+.openbtn.active div {
+  display: block;
 }
 
 .openbtn.active span:nth-of-type(1) {
