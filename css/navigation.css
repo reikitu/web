@@ -51,7 +51,6 @@
   animation-duration:0.5s;
   animation-fill-mode:forwards;
   opacity: 0;
-  background-color: rgba(0,0,0,0.5);
 }
 
 @keyframes fadeIn{
