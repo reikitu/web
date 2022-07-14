@@ -42,7 +42,7 @@
 
 .openbtn.active div {
   display: block;
-  position: absolute;
+  position: fixed;
   width: 100vh;
   height: 100vh;
   top: 50px;
