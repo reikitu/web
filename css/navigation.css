@@ -42,6 +42,9 @@
 
 .openbtn.active div {
   display: block;
+  width: 100vh;
+  height: 100vh;
+  right: 0px;
 }
 
 .openbtn.active span:nth-of-type(1) {
