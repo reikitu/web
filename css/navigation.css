@@ -1,4 +1,4 @@
-.bar, .openbtn {
+.bar, .openbtn, .openbtn div {
   background:#ffffff;
   cursor: pointer;
   position: fixed;
@@ -11,20 +11,15 @@
 .openbtn {
   width: 50px;
 }
-
 .openbtn div {
-  display: none;
-}
-.openbtn.active div {
-  display: block;
-  position: fixed;
-  width: 100%;
+  background-color: rgba(0,0,0,0.5);
   height: 100vh;
   top: 50px;
-  right: 0px;
-  background-color: rgba(0,0,0,0.5);
+  opacity: 0;
 }
-
+.openbtn div.active {
+  opacity: 1;
+}
 .openbtn span {
   display: inline-block;
   transition: all .4s;
