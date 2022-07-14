@@ -1,4 +1,4 @@
-.bar, .openbtn, .openbtn div {
+.bar, .openbtn, #nav {
   background:#ffffff;
   cursor: pointer;
   position: fixed;
@@ -11,13 +11,13 @@
 .openbtn {
   width: 50px;
 }
-.openbtn div {
+#nav {
   background-color: rgba(0,0,0,0.5);
   height: 100vh;
   top: 50px;
   opacity: 0;
 }
-.openbtn div.active {
+#nav.active {
   opacity: 1;
 }
 .openbtn span {
