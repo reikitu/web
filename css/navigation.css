@@ -57,7 +57,7 @@
 }
 #nav.active {
   opacity: 1;
-  overflow: hidden;
+  animation: fadeIn .3s ease 0s 1 forwards
 }
 #nav li {
   display: inline-block;
@@ -81,4 +81,12 @@
 }
 #nav li span, #nav li a:hover {
   background: linear-gradient(170deg, #ffd9fe 0%, #ffd9fe 50%, #cce4ff 50%, #cce4ff 100%);
+}
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
