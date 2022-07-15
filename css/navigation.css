@@ -57,7 +57,7 @@
 }
 #nav.active {
   opacity: 1;
-  animation: fadeIn .3s ease 0s 1 forwards;
+  animation: fadeIn .3s ease 0s 1 normal forwards;
 }
 #nav li {
   display: inline-block;
