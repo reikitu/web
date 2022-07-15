@@ -8,17 +8,9 @@
   right: 0;
   z-index: 30;
 }
+
 .openbtn {
   width: 50px;
-}
-#nav {
-  background-color: rgba(0,0,0,0.5);
-  height: 100vh;
-  top: 50px;
-  opacity: 0;
-}
-#nav.active {
-  opacity: 1;
 }
 .openbtn span {
   display: inline-block;
@@ -58,6 +50,13 @@
 #nav {
   text-align: center;
   font-size: 0px;
+  background-color: rgba(0,0,0,0.5);
+  height: 100vh;
+  top: 50px;
+  opacity: 0;
+}
+#nav.active {
+  opacity: 1;
 }
 #nav li {
   display: inline-block;
