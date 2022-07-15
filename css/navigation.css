@@ -1,5 +1,7 @@
-.bar, .openbtn, #nav {
-  background:#ffffff;
+.bar,
+.openbtn,
+#nav {
+  background: #ffffff;
   cursor: pointer;
   position: fixed;
   width: 100%;
@@ -12,34 +14,41 @@
 .openbtn {
   width: 50px;
 }
+
 .openbtn span {
   display: inline-block;
   transition: all .4s;
   position: absolute;
-  background:#666666;
+  background: #666666;
   left: 14px;
   height: 3px;
   border-radius: 2px;
   width: 45%;
 }
+
 .openbtn span:nth-of-type(1) {
   top: 15px;
 }
+
 .openbtn span:nth-of-type(2) {
   top: 23px;
 }
+
 .openbtn span:nth-of-type(3) {
   top: 31px;
 }
+
 .openbtn.active span:nth-of-type(1) {
   top: 18px;
   left: 18px;
   transform: translateY(6px) rotate(-45deg);
   width: 35%;
 }
+
 .openbtn.active span:nth-of-type(2) {
   opacity: 0;
 }
+
 .openbtn.active span:nth-of-type(3) {
   top: 30px;
   left: 18px;
@@ -50,22 +59,26 @@
 #nav {
   text-align: center;
   font-size: 0px;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
   top: 50px;
   opacity: 0;
 }
+
 #nav.active {
   opacity: 1;
   animation: fadeIn .3s ease 0s 1 normal forwards;
 }
+
 #nav li {
   display: inline-block;
   letter-spacing: -0.001px;
   width: 50%;
   max-width: 300px;
 }
-#nav li a, #nav li span {
+
+#nav li a,
+#nav li span {
   display: inline-block;
   text-decoration: none;
   font-size: 20px;
@@ -76,16 +89,21 @@
   color: black;
   width: 70%;
 }
+
 #nav li a {
   background: linear-gradient(170deg, #ffd9fe 0%, #ffd9fe 50%, #cce4ff 50%, #cce4ff 100%);
 }
-#nav li span, #nav li a:hover {
+
+#nav li span,
+#nav li a:hover {
   background: linear-gradient(170deg, #ffd9fe 0%, #ffd9fe 50%, #cce4ff 50%, #cce4ff 100%);
 }
-@keyframes FadeIn {
+
+@keyframes fadeIn {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }

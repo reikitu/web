@@ -4,28 +4,34 @@
 <!--include library/footer.html-->
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>REIKITU INFO</title>
   <link type="text/css" rel="stylesheet" href="../css/label.css">
   <script src="../js/checkInquiry.js"></script>
 </head>
+
 <body>
   <main>
     <h2 class="sub_title">お問い合わせ</h2><br>
     <div class="content">
       <div id="formWrapper">
-        <form action="https://docs.google.com/forms/d/e/1FAIpQLSfSBHWoqOW9FqLXs6chNLuznWSbvjsPOJIO8MHVEXNSwtPvig/formResponse" method="post" name="myForm" target="dummyIframe">
+        <form
+          action="https://docs.google.com/forms/d/e/1FAIpQLSfSBHWoqOW9FqLXs6chNLuznWSbvjsPOJIO8MHVEXNSwtPvig/formResponse"
+          method="post" name="myForm" target="dummyIframe">
           <p>こちらでお問い合わせ内容を送ることができます。</p>
           <p>以下の項目を入力して送信ボタンを押してください。</p>
           <p><br></p>
           <div>
             <label>お名前<span class="label label_red">必須</span><br></label>
-            <input name="entry.189874138" id="characterNameForm" placeholder="お名前をご入力ください。" required="required" style="width:50%;" type="text">
+            <input name="entry.189874138" id="characterNameForm" placeholder="お名前をご入力ください。" required="required"
+              style="width:50%;" type="text">
             <p><br></p>
           </div>
           <div>
             <label>お問い合わせ内容<span class="label label_red">必須</span><br></label>
-            <textarea name="entry.875781179" id="inquiryForm" placeholder="お問い合わせ内容をご入力ください。" required="required" style="height:64px; width:50%;"></textarea>
+            <textarea name="entry.875781179" id="inquiryForm" placeholder="お問い合わせ内容をご入力ください。" required="required"
+              style="height:64px; width:50%;"></textarea>
           </div>
           <input value="送信" onclick="checkSubmit()" type="submit">
           <p><br></p>
@@ -42,4 +48,5 @@
   <footer>
   </footer>
 </body>
+
 </html>

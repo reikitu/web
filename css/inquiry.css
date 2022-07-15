@@ -1,3 +1,5 @@
-html, body, .content {
+html,
+body,
+.content {
   height: calc(100% - 36px);
 }

@@ -17,10 +17,10 @@ function createMemberList(_jsonText) {
 	target.appendChild(div);
 	let view = createView(div, "更新履歴");
 	_jsonText.forEach((data, index) => {
-		if(index == MAX_UPDATE_HISTORY_DRAW){
+		if (index == MAX_UPDATE_HISTORY_DRAW) {
 			view = createDetails(view, "");
 		}
-		if(index < MAX_UPDATE_HISTORY_VIEW){
+		if (index < MAX_UPDATE_HISTORY_VIEW) {
 			createPanel(view, data.msg, data.date);
 		}
 	});
@@ -52,7 +52,7 @@ function createPanel(_parent, _msg, _date) {
 
 	let label = document.createElement("span");
 	label.classList.add("label");
-	if(_msg.indexOf("追加") >= 0) {
+	if (_msg.indexOf("追加") >= 0) {
 		label.classList.add("label_red");
 		label.innerHTML = "追加";
 	} else {
@@ -60,11 +60,11 @@ function createPanel(_parent, _msg, _date) {
 		label.innerHTML = "更新";
 	}
 	li.appendChild(label);
-	
+
 	let msgLabel = document.createElement("span");
 	msgLabel.innerHTML = _msg;
 	li.appendChild(msgLabel);
-	
+
 	let dateLabel = document.createElement("span");
 	dateLabel.classList.add("article-list-date");
 	dateLabel.innerHTML = _date;

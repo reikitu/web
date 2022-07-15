@@ -21,7 +21,7 @@
   padding-top: 100%;
 }
 
-.character_image > img {
+.character_image>img {
   position: absolute;
   object-fit: cover;
   top: 0px;
