@@ -1,17 +1,4 @@
-﻿function loadJson() {
-	let req = new XMLHttpRequest();
-	req.open("get", "https://script.google.com/macros/s/AKfycbyb_DTouvJUwprOABBc6E9SJFzQOo9xdUZ_pFn-bj9b5M7MfzxcZfTB-scFPZx_-2wW/exec?type=syureneko", true);
-	req.send();
-	req.onreadystatechange = function () {
-		if (req.readyState == 4 && req.status == 200) {
-			let json = JSON.parse(req.responseText);
-			createMemberList(json);
-			loadingCompleted();
-		}
-	};
-}
-
-function createMemberList(_jsonText) {
+﻿function createMemberList(_jsonText) {
 	let target = document.getElementById("memberList");
 	const titles = ["リーダー", "マネージャー", "コモンメンバー", "ビジター"];
 	let div = document.createElement("div");
@@ -59,5 +46,3 @@ function createPanel(_parent, _name, _path) {
 		imgDiv.appendChild(img);
 	}
 }
-
-loadJson();
