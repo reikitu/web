@@ -8,7 +8,7 @@
 	_jsonText.forEach(data => {
 		let index = titles.indexOf(data.type);
 		if (index >= 0) {
-			createPanel(views[index], data.name, data.path);
+			createPanel(views[index], data.name, data.ImageID, data.Extension);
 			this._memberCount++;
 		}
 	});
@@ -30,7 +30,7 @@ function createView(_parent, _title) {
 	return div;
 }
 
-function createPanel(_parent, _name, _path) {
+function createPanel(_parent, _name, _imageID, _extension) {
 	let panel = document.createElement("div");
 	panel.classList.add("character_panel");
 	_parent.appendChild(panel);
@@ -42,7 +42,7 @@ function createPanel(_parent, _name, _path) {
 		imgDiv.classList.add("character_image");
 		panel.appendChild(imgDiv);
 		let img = document.createElement("img");
-		img.src = "img/character/" + _path;
+		img.src = "https://drive.google.com/uc?id=" + _imageID + "&." + _extension";
 		imgDiv.appendChild(img);
 	}
 }
