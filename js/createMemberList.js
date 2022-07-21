@@ -8,7 +8,7 @@
 	_jsonText.forEach(data => {
 		let index = titles.indexOf(data.type);
 		if (index >= 0) {
-			createPanel(views[index], data.name, data.ImageID, data.Extension);
+			createPanel(views[index], data.name, data.ImageID);
 			this._memberCount++;
 		}
 	});
@@ -30,14 +30,14 @@ function createView(_parent, _title) {
 	return div;
 }
 
-function createPanel(_parent, _name, _imageID, _extension) {
+function createPanel(_parent, _name, _imageID) {
 	let panel = document.createElement("div");
 	panel.classList.add("character_panel");
 	_parent.appendChild(panel);
 	let h3 = document.createElement("h3");
 	h3.textContent = _name;
 	panel.appendChild(h3);
-	if (_imageID && _extension) {
+	if (_imageID) {
 		let imgDiv = document.createElement("div");
 		imgDiv.classList.add("character_image");
 		panel.appendChild(imgDiv);
