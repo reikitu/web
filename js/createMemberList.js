@@ -42,7 +42,7 @@ function createPanel(_parent, _name, _imageID, _extension) {
 		imgDiv.classList.add("character_image");
 		panel.appendChild(imgDiv);
 		let img = document.createElement("img");
-		img.src = "https://drive.google.com/uc?id=" + _imageID + "&." + _extension";
+		img.src = "https://drive.google.com/uc?id=" + _imageID + "&." + _extension;
 		imgDiv.appendChild(img);
 	}
 }
