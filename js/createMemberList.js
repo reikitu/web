@@ -37,7 +37,7 @@ function createPanel(_parent, _name, _imageID, _extension) {
 	let h3 = document.createElement("h3");
 	h3.textContent = _name;
 	panel.appendChild(h3);
-	if (_path) {
+	if (_imageID && _extension) {
 		let imgDiv = document.createElement("div");
 		imgDiv.classList.add("character_image");
 		panel.appendChild(imgDiv);
