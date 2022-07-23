@@ -1,4 +1,4 @@
 function loadingCompleted() {
-  $("#splash").fadeOut('slow');
-  $("#splash_logo").fadeOut('slow');
+  $("#loading").fadeOut('slow');
+  $("#loadingLogo").fadeOut('slow');
 }
