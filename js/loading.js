@@ -1,4 +1,3 @@
 function loadingCompleted() {
-  $("#loading").fadeOut('slow');
-  $("#loadingLogo").fadeOut('slow');
+  document.getElementById("loading").classList.toggle("fadeOut");
 }
