@@ -62,6 +62,8 @@
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
   top: 50px;
+  visibility: hidden;
+  opacity: 0;
 }
 
 #navigation li {
