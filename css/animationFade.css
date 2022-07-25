@@ -8,22 +8,24 @@
 
 @keyframes fadeInAnime {
     from {
-        Visibility: visible;
+        visibility: visible;
         opacity: 0;
     }
 
     to {
+        visibility: visible;
         opacity: 1;
     }
 }
 
 @keyframes fadeOutAnime {
     from {
+        visibility: visible;
         opacity: 1;
     }
 
     to {
-        Visibility: hidden;
+        visibility: hidden;
         opacity: 0;
     }
 }
