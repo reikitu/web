@@ -2,6 +2,11 @@ function onClickedNavigationButton(element) {
   // 仮
   element.classList.toggle("active");
   let navigation = document.getElementById("navigation");
-  navigation.classList.toggle("fadeIn");
-  navigation.classList.toggle("fadeOut");
+  if(navigation.classList.length > 0) {
+    navigation.classList.toggle("fadeIn");
+    navigation.classList.toggle("fadeOut");
+  }
+  else {
+    navigation.classList.add("fadeIn");
+  }
 }
