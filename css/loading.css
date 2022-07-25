@@ -6,6 +6,8 @@
   background: #333;
   text-align: center;
   color: white;
+  visibility: visible;
+  opacity: 1;
 }
 
 #loadingLogo {
