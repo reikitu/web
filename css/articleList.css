@@ -5,7 +5,7 @@
 
 .article-title {
   padding-bottom: 6px;
-  border-bottom: 1px solid #333333;
+  border-bottom: 1px solid #333;
   clear: both;
   margin-right: 12px;
   margin-left: 12px;
@@ -20,7 +20,7 @@
 }
 
 .article-list li {
-  border-bottom: 1px dotted #333333;
+  border-bottom: 1px dotted #333;
   padding: 8px 0px;
   margin: 0px 12px;
 }
@@ -35,7 +35,7 @@
 }
 
 details[open] summary {
-  border-bottom: 1px dotted #333333;
+  border-bottom: 1px dotted #333;
   margin: 0px 12px;
 }
 

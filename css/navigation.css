@@ -1,8 +1,7 @@
 .bar,
 .navigationButton,
 #navigation {
-  background: #ffffff;
-  cursor: pointer;
+  background: white;
   position: fixed;
   width: 100%;
   height: 50px;
@@ -11,38 +10,52 @@
   z-index: 30;
 }
 
+.bar {
+  box-shadow: 0px 0px 8px gray;
+}
+
+.bar a img {
+  width: auto;
+  height: 100%;
+}
+
 .navigationButton {
   width: 50px;
+  cursor: pointer;
 }
 
 .navigationButton span {
   display: inline-block;
   transition: all .4s;
   position: absolute;
-  background: #666666;
   left: 14px;
   height: 3px;
   border-radius: 2px;
   width: 45%;
+  box-shadow: 0px 0px 2px black;
 }
 
 .navigationButton span:nth-of-type(1) {
   top: 15px;
+  z-index: 31;
+  background: #cce4ff;
 }
 
 .navigationButton span:nth-of-type(2) {
   top: 23px;
+  background: gray;
 }
 
 .navigationButton span:nth-of-type(3) {
   top: 31px;
+  background: #ffd9fe;
 }
 
 .navigationButton.active span:nth-of-type(1) {
   top: 18px;
-  left: 18px;
-  transform: translateY(6px) rotate(-45deg);
-  width: 35%;
+  left: 16px;
+  transform: translateY(6px) rotate(45deg);
+  width: 40%;
 }
 
 .navigationButton.active span:nth-of-type(2) {
@@ -51,9 +64,9 @@
 
 .navigationButton.active span:nth-of-type(3) {
   top: 30px;
-  left: 18px;
-  transform: translateY(-6px) rotate(45deg);
-  width: 35%;
+  left: 16px;
+  transform: translateY(-6px) rotate(-45deg);
+  width: 40%;
 }
 
 #navigation {
