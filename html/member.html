@@ -1,7 +1,4 @@
-<!--include library/header.html-->
-<!--include library/background.html-->
-<!--include library/navigation.html-->
-<!--include library/footer.html-->
+<!--include library/base.html-->
 <!--include library/loading.html-->
 <!DOCTYPE html>
 <html>
@@ -12,15 +9,12 @@
   <link type="text/css" rel="stylesheet" href="../css/member.css">
   <link type="text/css" rel="stylesheet" href="../css/articleList.css">
   <script src="../js/createMemberList.js"></script>
-  <script src="../js/jsonLoader.js"></script>
   <script>getJsonFromAPI("https://script.google.com/macros/s/AKfycbzl4sWv384nLSEQ7KtslNp2DeGngDDXLpTBKqr6TdBkcPVIxkmlaRvoqq9_Adj35dRT5w/exec", createMemberList);</script>
 </head>
 
 <body>
   <main>
-    <h1 id="title"></h1>
-    <img src="../img/header.png" alt="header" id="header">
-    <h2 class="sub_title">チームメンバ紹介</h2><br>
+    <h2 class="sub_title">メンバ</h2><br>
     <div id="memberList"></div>
   </main>
   <footer>
