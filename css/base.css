@@ -49,93 +49,132 @@ body::after {
   height: 100%;
 }
 
-.navigationButton {
-  width: 50px;
-  cursor: pointer;
+@media screen and (max-width: 699px) {
+  #navigation {
+    text-align: center;
+    font-size: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    top: 50px;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  #navigation li {
+    display: inline-block;
+    letter-spacing: -0.001px;
+    width: 50%;
+    max-width: 300px;
+  }
+
+  #navigation li a,
+  #navigation li span {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 0px;
+    margin: 20px 0px;
+    font-weight: bold;
+    letter-spacing: normal;
+    color: black;
+    width: 70%;
+  }
+
+  #navigation li a {
+    background: linear-gradient(170deg, #ffd9fe 0%, #ffd9fe 50%, #cce4ff 50%, #cce4ff 100%);
+  }
+
+  #navigation li span,
+  #navigation li a:hover {
+    background: linear-gradient(170deg, #ffd9fe 0%, #ffd9fe 50%, #cce4ff 50%, #cce4ff 100%);
+  }
+
+  .navigationButton {
+    width: 50px;
+    cursor: pointer;
+  }
+
+  .navigationButton span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    width: 45%;
+    box-shadow: 0px 0px 2px black;
+  }
+
+  .navigationButton span:nth-of-type(1) {
+    top: 15px;
+    z-index: 31;
+    background: #cce4ff;
+  }
+
+  .navigationButton span:nth-of-type(2) {
+    top: 23px;
+    background: gray;
+  }
+
+  .navigationButton span:nth-of-type(3) {
+    top: 31px;
+    background: #ffd9fe;
+  }
+
+  .navigationButton.active span:nth-of-type(1) {
+    top: 18px;
+    left: 16px;
+    transform: translateY(6px) rotate(45deg);
+    width: 40%;
+  }
+
+  .navigationButton.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .navigationButton.active span:nth-of-type(3) {
+    top: 30px;
+    left: 16px;
+    transform: translateY(-6px) rotate(-45deg);
+    width: 40%;
+  }
 }
 
-.navigationButton span {
-  display: inline-block;
-  transition: all .4s;
-  position: absolute;
-  left: 14px;
-  height: 3px;
-  border-radius: 2px;
-  width: 45%;
-  box-shadow: 0px 0px 2px black;
-}
+@media screen and (min-width: 700px) {
+  #navigation {
+    text-align: right;
+    font-size: 0px;
+    background-color: rgba(0, 0, 0, 0.0);
+    height: 50px;
+  }
 
-.navigationButton span:nth-of-type(1) {
-  top: 15px;
-  z-index: 31;
-  background: #cce4ff;
-}
+  #navigation li {
+    display: inline-block;
+    text-align: left;
+    letter-spacing: -0.001px;
+    margin: 11px 4%;
+  }
 
-.navigationButton span:nth-of-type(2) {
-  top: 23px;
-  background: gray;
-}
+  #navigation li a,
+  #navigation li span {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: normal;
+    color: black;
+  }
 
-.navigationButton span:nth-of-type(3) {
-  top: 31px;
-  background: #ffd9fe;
-}
-
-.navigationButton.active span:nth-of-type(1) {
-  top: 18px;
-  left: 16px;
-  transform: translateY(6px) rotate(45deg);
-  width: 40%;
-}
-
-.navigationButton.active span:nth-of-type(2) {
-  opacity: 0;
-}
-
-.navigationButton.active span:nth-of-type(3) {
-  top: 30px;
-  left: 16px;
-  transform: translateY(-6px) rotate(-45deg);
-  width: 40%;
-}
-
-#navigation {
-  text-align: center;
-  font-size: 0px;
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 100%;
-  top: 50px;
-  visibility: hidden;
-  opacity: 0;
-}
-
-#navigation li {
-  display: inline-block;
-  letter-spacing: -0.001px;
-  width: 50%;
-  max-width: 300px;
-}
-
-#navigation li a,
-#navigation li span {
-  display: inline-block;
-  text-decoration: none;
-  font-size: 20px;
-  padding: 20px 0px;
-  margin: 20px 0px;
-  font-weight: bold;
-  letter-spacing: normal;
-  color: black;
-  width: 70%;
-}
-
-#navigation li a {
-  background: linear-gradient(170deg, #ffd9fe 0%, #ffd9fe 50%, #cce4ff 50%, #cce4ff 100%);
-}
-
-#navigation li span,
-#navigation li a:hover {
-  background: linear-gradient(170deg, #ffd9fe 0%, #ffd9fe 50%, #cce4ff 50%, #cce4ff 100%);
+  .navigationButton,
+  .navigationButton span,
+  .navigationButton span:nth-of-type(1),
+  .navigationButton span:nth-of-type(2),
+  .navigationButton span:nth-of-type(3),
+  .navigationButton.active span:nth-of-type(1),
+  .navigationButton.active span:nth-of-type(2),
+  .navigationButton.active span:nth-of-type(3) {
+    visibility: hidden;
+  }
 }
 
 .fadeIn {
