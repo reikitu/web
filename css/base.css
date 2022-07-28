@@ -41,7 +41,8 @@ body::after {
   background: #007aff;
   top: 0%;
   right: 50%;
-  transform: rotate(-33deg) translateX(101vw);
+  transform-origin: right top;
+  transform: translateX(110vw);
   animation: bgLine1Anime 5s linear 0s infinite normal forwards;
 }
 
@@ -49,7 +50,8 @@ body::after {
   background: #007aff;
   top: 50%;
   right: 0%;
-  transform: rotate(16deg) translateX(101vw);
+  transform-origin: right top;
+  transform: translateX(110vw);
   animation: bgLine3Anime 4s linear 4s infinite normal forwards;
 }
 
@@ -57,7 +59,8 @@ body::after {
   background: #ff7aff;
   top: 100%;
   left: 50%;
-  transform: rotate(-33deg) translateX(-101vw);
+  transform-origin: left top;
+  transform: translateX(110vw);
   animation: bgLine2Anime 5s linear 2s infinite normal forwards;
 }
 
@@ -65,7 +68,8 @@ body::after {
   background: #ff7aff;
   top: 50%;
   left: 0%;
-  transform: rotate(16deg) translateX(-101vw);
+  transform-origin: left top;
+  transform: translateX(110vw);
   animation: bgLine4Anime 4s linear 6s infinite normal forwards;
 }
 
