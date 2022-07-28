@@ -22,10 +22,55 @@ body::after {
   content: "";
   height: 100vh;
   left: 0;
-  position: fixed;
   top: 0;
+  position: fixed;
   width: 100%;
   z-index: -1;
+}
+
+.background span {
+  display: inline-block;
+  position: fixed;
+  transition: all .4s;
+  height: 1px;
+  width: 100vw;
+  z-index: -1;
+}
+
+.background span:nth-of-type(1) {
+  background: #007aff;
+  top: 0%;
+  right: 50%;
+  transform-origin: right;
+  transform: rotate(-33deg) translateX(101vw);
+  animation: bgLine1Anime 5s linear 0s infinite normal forwards;
+}
+
+.background span:nth-of-type(3) {
+  background: #007aff;
+  top: 50%;
+  right: 0%;
+  transform-origin: right;
+  transform: rotate(16deg) translateX(101vw);
+  animation: bgLine3Anime 4s linear 4s infinite normal forwards;
+}
+
+.background span:nth-of-type(2) {
+  background: #ff7aff;
+  top: 100%;
+  left: 50%;
+  transform-origin: left;
+  transform: rotate(-33deg) translateX(-101vw);
+  animation: bgLine2Anime 5s linear 2s infinite normal forwards;
+}
+
+.background span:nth-of-type(4) {
+  background: #ff7aff;
+  top: 50%;
+  left: 0%;
+  transform-origin: left;
+  transform: rotate(16deg) translateX(-101vw);
+  animation: bgLine4Anime 4s linear 6s infinite normal forwards;
 }
 
 .bar,
@@ -47,6 +92,14 @@ body::after {
 .bar a img {
   width: auto;
   height: 100%;
+}
+
+.fadeIn {
+  animation: fadeInAnime .3s ease 0s 1 normal forwards;
+}
+
+.fadeOut {
+  animation: fadeOutAnime .3s ease 0s 1 normal forwards;
 }
 
 @media screen and (max-width: 699px) {
@@ -177,10 +230,6 @@ body::after {
   }
 }
 
-.fadeIn {
-  animation: fadeInAnime .3s ease 0s 1 normal forwards;
-}
-
 @keyframes fadeInAnime {
   from {
     visibility: visible;
@@ -193,10 +242,6 @@ body::after {
   }
 }
 
-.fadeOut {
-  animation: fadeOutAnime .3s ease 0s 1 normal forwards;
-}
-
 @keyframes fadeOutAnime {
   from {
     visibility: visible;
@@ -206,5 +251,53 @@ body::after {
   to {
     visibility: hidden;
     opacity: 0;
+  }
+}
+
+@keyframes bgLine1Anime {
+
+  0%,
+  80% {
+    transform: rotate(-33deg) translateX(101vw);
+  }
+
+  100% {
+    transform: rotate(-33deg) translateX(-100vw);
+  }
+}
+
+@keyframes bgLine2Anime {
+
+  0%,
+  80% {
+    transform: rotate(-33deg) translateX(-101vw);
+  }
+
+  100% {
+    transform: rotate(-33deg) translateX(100vw);
+  }
+}
+
+@keyframes bgLine3Anime {
+
+  0%,
+  80% {
+    transform: rotate(16deg) translateX(101vw);
+  }
+
+  100% {
+    transform: rotate(16deg) translateX(-100vw);
+  }
+}
+
+@keyframes bgLine4Anime {
+
+  0%,
+  80% {
+    transform: rotate(16deg) translateX(-101vw);
+  }
+
+  100% {
+    transform: rotate(16deg) translateX(100vw);
   }
 }
