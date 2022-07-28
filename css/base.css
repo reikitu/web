@@ -39,37 +39,28 @@ body::after {
 
 .background span:nth-of-type(1) {
   background: #007aff;
-  top: 0%;
-  right: 50%;
-  transform-origin: right top;
-  transform: translateX(110vw);
+  transform: rotate(-33deg) translateX(60vw);
   animation: bgLine1Anime 5s linear 0s infinite normal forwards;
 }
 
 .background span:nth-of-type(3) {
   background: #007aff;
-  top: 50%;
-  right: 0%;
-  transform-origin: right top;
-  transform: translateX(110vw);
+  top: 25%;
+  transform: rotate(16deg) translateX(110vw);
   animation: bgLine3Anime 4s linear 4s infinite normal forwards;
 }
 
 .background span:nth-of-type(2) {
   background: #ff7aff;
   top: 100%;
-  left: 50%;
-  transform-origin: left top;
-  transform: translateX(110vw);
+  transform: rotate(-33deg) translateX(-60vw);
   animation: bgLine2Anime 5s linear 2s infinite normal forwards;
 }
 
 .background span:nth-of-type(4) {
   background: #ff7aff;
-  top: 50%;
-  left: 0%;
-  transform-origin: left top;
-  transform: translateX(110vw);
+  top: 75%;
+  transform: rotate(16deg) translateX(-110vw);
   animation: bgLine4Anime 4s linear 6s infinite normal forwards;
 }
 
@@ -258,11 +249,11 @@ body::after {
 
   0%,
   80% {
-    transform: rotate(-33deg) translateX(101vw);
+    transform: rotate(-33deg) translateX(60vw);
   }
 
   100% {
-    transform: rotate(-33deg) translateX(-100vw);
+    transform: rotate(-33deg) translateX(-160vw);
   }
 }
 
@@ -270,11 +261,11 @@ body::after {
 
   0%,
   80% {
-    transform: rotate(-33deg) translateX(-101vw);
+    transform: rotate(-33deg) translateX(-60vw);
   }
 
   100% {
-    transform: rotate(-33deg) translateX(100vw);
+    transform: rotate(-33deg) translateX(160vw);
   }
 }
 
@@ -282,11 +273,11 @@ body::after {
 
   0%,
   80% {
-    transform: rotate(16deg) translateX(101vw);
+    transform: rotate(16deg) translateX(110vw);
   }
 
   100% {
-    transform: rotate(16deg) translateX(-100vw);
+    transform: rotate(16deg) translateX(-110vw);
   }
 }
 
@@ -294,10 +285,10 @@ body::after {
 
   0%,
   80% {
-    transform: rotate(16deg) translateX(-101vw);
+    transform: rotate(16deg) translateX(-110vw);
   }
 
   100% {
-    transform: rotate(16deg) translateX(100vw);
+    transform: rotate(16deg) translateX(110vw);
   }
 }
