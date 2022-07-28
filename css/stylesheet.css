@@ -5,6 +5,7 @@
 
 html {
   -webkit-text-size-adjust: 100%;
+  perspective: 1000;
 }
 
 main {
