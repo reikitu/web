@@ -42,7 +42,7 @@ body::after {
   top: 0%;
   right: 50%;
   transform-origin: right;
-  transform: rotate(-33deg) translateX(101vw);
+  transform: rotate(-33deg) translateX(-100vw);
   animation: bgLine1Anime 5s linear 0s infinite normal forwards;
 }
 
@@ -51,7 +51,7 @@ body::after {
   top: 50%;
   right: 0%;
   transform-origin: right;
-  transform: rotate(16deg) translateX(101vw);
+  transform: rotate(16deg) translateX(-100vw);
   animation: bgLine3Anime 4s linear 4s infinite normal forwards;
 }
 
@@ -60,7 +60,7 @@ body::after {
   top: 100%;
   left: 50%;
   transform-origin: left;
-  transform: rotate(-33deg) translateX(-101vw);
+  transform: rotate(-33deg) translateX(100vw);
   animation: bgLine2Anime 5s linear 2s infinite normal forwards;
 }
 
@@ -69,7 +69,7 @@ body::after {
   top: 50%;
   left: 0%;
   transform-origin: left;
-  transform: rotate(16deg) translateX(-101vw);
+  transform: rotate(16deg) translateX(100vw);
   animation: bgLine4Anime 4s linear 6s infinite normal forwards;
 }
 
