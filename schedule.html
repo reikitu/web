@@ -11,14 +11,13 @@
   <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
   <meta name="theme-color" content="#ffd9fe">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link type="text/css" rel="stylesheet" href="css/base.css">
   <script src="js/base.js"></script>
   <link type="text/css" rel="stylesheet" href="css/loading.css">
   <script src="js/loading.js"></script>
   <title>REIKITU MEMBER</title>
-  <link type="text/css" rel="stylesheet" href="css/stylesheet.css">
   <link type="text/css" rel="stylesheet" href="css/member.css">
   <link type="text/css" rel="stylesheet" href="css/articleList.css">
+  <link type="text/css" rel="stylesheet" href="css/base.css">
   <script src="js/createScheduleList.js"></script>
   <script>getJsonFromAPI("https://script.google.com/macros/s/AKfycbzar6tSf0Q0kpPnJ5pbCcZNPzYTMs3Zp8CItCKd2F5zx5xz0-tHa1gM69kHLnRtMIO4wA/exec", createScheduleList);</script>
 </head>
@@ -38,8 +37,12 @@
     <div id="loadingLogo"><img src="img/logo.svg" width="5" height="2" alt="loading" class="fadeUp"></div>
   </div>
   <main>
-    <h1 id="title"></h1>
-    <img src="img/header.jpg" width="3" height="1" alt="header" id="header">
+    <div id="header">
+      <img class="slideshowImage" src="img/header.jpg" width="3" height="1" alt="slideshowImage">
+      <img class="slideshowImage" src="img/header.jpg" width="3" height="1" alt="slideshowImage">
+      <img class="slideshowImage" src="img/header.jpg" width="3" height="1" alt="slideshowImage">
+      <img class="slideshowImage" src="img/header.jpg" width="3" height="1" alt="slideshowImage">
+    </div>
     <h2 class="sub_title">スケジュール</h2><br>
     <div id="memberList"></div>
   </main>
