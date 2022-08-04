@@ -39,6 +39,8 @@ footer {
   height: auto;
   overflow: hidden;
   position: relative;
+  left: 0px;
+  right: 0px;
   margin: 0 auto;
   padding:7px;
   border:1px solid #ccc;
