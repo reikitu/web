@@ -42,9 +42,7 @@ footer {
   left: 0px;
   right: 0px;
   margin: 0 auto;
-  padding:7px;
-  border:1px solid #ccc;
-  background:#fff;
+  border:7px solid #ccc;
   aspect-ratio: 16/9;
 }
 
