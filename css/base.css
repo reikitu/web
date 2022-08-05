@@ -42,6 +42,7 @@ footer {
   left: 0px;
   right: 0px;
   margin: 0 auto;
+  border: 6px solid gray;
   aspect-ratio: 16/9;
 }
 
