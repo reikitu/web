@@ -35,14 +35,14 @@ footer {
 }
 
 #header {
-  width: 60%;
+  width: 70%;
   height: auto;
   overflow: hidden;
   position: relative;
   left: 0px;
   right: 0px;
   margin: 0 auto;
-  border: 6px solid gray;
+  border: 5px solid white;
   aspect-ratio: 16/9;
 }
 
