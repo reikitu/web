@@ -13,7 +13,6 @@ main {
 
 body,
 body::after {
-  background: linear-gradient(170deg, #ffd9fe 0%, #ffd9fe 50%, #cce4ff 50%, #cce4ff 100%);
 }
 
 body::after {
@@ -35,7 +34,7 @@ body::after {
   left: 0px;
   right: 0px;
   margin: 0 auto;
-  border: 5px solid white;
+  border: 5px solid linear-gradient(170deg, #ffd9fe 0%, #ffd9fe 50%, #cce4ff 50%, #cce4ff 100%);
   aspect-ratio: 16/9;
 }
 
