@@ -64,12 +64,16 @@ footer,
   text-align: center;
 }
 
+main {
+  background-color: #fefecf;
+}
+
 footer {
-  background: white;
+  background-color: white;
 }
 
 .background::before {
-  background-color: #fefecf;
+  background-color: rdba(0,0,0,0);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
