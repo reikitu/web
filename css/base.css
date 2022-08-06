@@ -13,7 +13,7 @@ main {
 
 body,
 body::after {
-  background-color: #cce4ff;
+  background-color: #fefecf;
 }
 
 body::after {
@@ -65,6 +65,7 @@ footer,
   text-align: center;
 }
 
+/*
 .background::before {
   background: linear-gradient(170deg, #ffd9fe 0%, #ffd9fe 50%, #cce4ff 50%, #cce4ff 100%);
   background-position: center;
@@ -114,6 +115,7 @@ footer,
   transform: rotate(16deg) translateX(-110vw);
   animation: bgLine4Anime 4s linear 6s infinite normal forwards;
 }
+*/
 
 .bar,
 .navigationButton,
