@@ -65,6 +65,10 @@ footer,
   text-align: center;
 }
 
+footer {
+  background: white;
+}
+
 /*
 .background::before {
   background: linear-gradient(170deg, #ffd9fe 0%, #ffd9fe 50%, #cce4ff 50%, #cce4ff 100%);
