@@ -13,7 +13,7 @@ main {
 
 body,
 body::after {
-  background-color: #fefecf;
+  background: linear-gradient(170deg, #ffd9fe 0%, #ffd9fe 50%, #cce4ff 50%, #cce4ff 100%);
 }
 
 body::after {
@@ -69,9 +69,8 @@ footer {
   background: white;
 }
 
-/*
 .background::before {
-  background: linear-gradient(170deg, #ffd9fe 0%, #ffd9fe 50%, #cce4ff 50%, #cce4ff 100%);
+  background-color: #fefecf;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -119,7 +118,6 @@ footer {
   transform: rotate(16deg) translateX(-110vw);
   animation: bgLine4Anime 4s linear 6s infinite normal forwards;
 }
-*/
 
 .bar,
 .navigationButton,
