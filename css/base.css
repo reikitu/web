@@ -8,21 +8,12 @@ html {
 }
 
 main {
-  padding-top: 50px;
+  padding-top: 70px;
+  background-color: #fefecf;
 }
 
-body,
-body::after {}
-
-body::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 50%;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  z-index: -2;
+footer {
+  background-color: white;
 }
 
 #header {
@@ -65,35 +56,13 @@ footer,
   text-align: center;
 }
 
-main {
-  background-color: #fefecf;
-}
-
-footer {
-  background-color: white;
-}
-
-.background::before {
-  background-color: rdba(0, 0, 0, 0);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  content: "";
-  height: 100vh;
-  left: 0;
-  top: 0;
-  position: fixed;
-  width: 100%;
-  z-index: -1;
-}
-
 .background span {
   display: inline-block;
   position: fixed;
   transition: all .4s;
   height: 1px;
   width: 100vw;
-  z-index: -1;
+  z-index: 0;
 }
 
 .background span:nth-of-type(1) {
