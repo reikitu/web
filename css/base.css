@@ -12,8 +12,7 @@ main {
 }
 
 body,
-body::after {
-}
+body::after {}
 
 body::after {
   content: "";
@@ -34,7 +33,9 @@ body::after {
   left: 0px;
   right: 0px;
   margin: 0 auto;
-  border: 5px solid linear-gradient(170deg, #ffd9fe 0%, #ffd9fe 50%, #cce4ff 50%, #cce4ff 100%);
+  border: 5px solid;
+  border-image: linear-gradient(170deg, #ffd9fe 0%, #ffd9fe 50%, #cce4ff 50%, #cce4ff 100%);
+  border-image-slice: 1;
   aspect-ratio: 16/9;
 }
 
@@ -73,7 +74,7 @@ footer {
 }
 
 .background::before {
-  background-color: rdba(0,0,0,0);
+  background-color: rdba(0, 0, 0, 0);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
