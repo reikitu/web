@@ -25,7 +25,7 @@ footer {
   right: 0px;
   margin: 0 auto;
   border: 5px solid;
-  border-image: linear-gradient(170deg, #ffd9fe 0%, #ffd9fe 50%, #cce4ff 50%, #cce4ff 100%);
+  border-image: linear-gradient(170deg, #cce4ff 0%, #cce4ff 50%, #ffd9fe 50%, #ffd9fe 100%);
   border-image-slice: 1;
   aspect-ratio: 16/9;
 }
