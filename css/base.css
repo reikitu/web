@@ -36,12 +36,15 @@ footer {
 
 p {
   padding: 5px;
+  text-align: left;
 }
 
 .content {
   padding: 10px 0;
   text-align: center;
-  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1000px;
 }
 
 .fadeIn {
@@ -88,13 +91,8 @@ p {
 }
 
 #slideshowImage {
-  width: 70%;
-  height: auto;
   overflow: hidden;
   position: relative;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
   border: 5px solid;
   border-image: linear-gradient(170deg, #cce4ff 0%, #cce4ff 50%, #ffd9fe 50%, #ffd9fe 100%);
   border-image-slice: 1;
@@ -154,6 +152,45 @@ p {
 
 .linkButton:hover:after {
   right: 7px;
+}
+
+@media screen and (min-width: 700px) {
+  #navigation {
+    position: fixed;
+    right: 0;
+    width: 80%;
+    top: 0;
+    text-align: right;
+    height: 50px;
+  }
+
+  #navigation li {
+    display: inline-block;
+    text-align: left;
+    letter-spacing: -.001px;
+    margin: 11px 4%;
+  }
+
+  #navigation li a,
+  #navigation li span {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: normal;
+    color: #292929;
+  }
+
+  .navigationButton,
+  .navigationButton span,
+  .navigationButton span:nth-of-type(1),
+  .navigationButton span:nth-of-type(2),
+  .navigationButton span:nth-of-type(3),
+  .navigationButton.active span:nth-of-type(1),
+  .navigationButton.active span:nth-of-type(2),
+  .navigationButton.active span:nth-of-type(3) {
+    visibility: hidden;
+  }
 }
 
 @media screen and (max-width: 699px) {
@@ -238,45 +275,6 @@ p {
     left: 16px;
     transform: translateY(-6px) rotate(-45deg);
     width: 40%;
-  }
-}
-
-@media screen and (min-width: 700px) {
-  #navigation {
-    position: fixed;
-    right: 0;
-    width: 80%;
-    top: 0;
-    text-align: right;
-    height: 50px;
-  }
-
-  #navigation li {
-    display: inline-block;
-    text-align: left;
-    letter-spacing: -.001px;
-    margin: 11px 4%;
-  }
-
-  #navigation li a,
-  #navigation li span {
-    display: inline-block;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: normal;
-    color: #292929;
-  }
-
-  .navigationButton,
-  .navigationButton span,
-  .navigationButton span:nth-of-type(1),
-  .navigationButton span:nth-of-type(2),
-  .navigationButton span:nth-of-type(3),
-  .navigationButton.active span:nth-of-type(1),
-  .navigationButton.active span:nth-of-type(2),
-  .navigationButton.active span:nth-of-type(3) {
-    visibility: hidden;
   }
 }
 
