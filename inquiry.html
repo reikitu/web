@@ -39,14 +39,11 @@
         <form
           action="https://docs.google.com/forms/d/e/1FAIpQLSfSBHWoqOW9FqLXs6chNLuznWSbvjsPOJIO8MHVEXNSwtPvig/formResponse"
           method="post" name="myForm" target="dummyIframe">
-          <p>こちらでお問い合わせ内容を送ることができます。</p>
-          <p>以下の項目を入力して送信ボタンを押してください。</p>
-          <p><br></p>
+          <p class="center">こちらでお問い合わせ内容を送ることができます。<br>以下の項目を入力して送信ボタンを押してください。</p>
           <div>
             <label>お名前<span class="label label_red">必須</span><br></label>
             <input name="entry.189874138" id="characterNameForm" placeholder="お名前をご入力ください。" required="required"
               style="width:50%;" type="text">
-            <p><br></p>
           </div>
           <div>
             <label>お問い合わせ内容<span class="label label_red">必須</span><br></label>
@@ -54,21 +51,18 @@
               style="height:64px; width:50%;"></textarea>
           </div>
           <input value="送信" onclick="checkSubmit()" type="submit">
-          <p><br></p>
         </form>
         <iframe name="dummyIframe" style="display:none;"></iframe>
       </div>
       <div id="thxMessage" style="display:none;">
-        <p>お問い合わせありがとうございました。</p>
-        <p>管理者が確認するまでお待ちください。</p>
-        <p><br></p>
+        <p>お問い合わせありがとうございました。<br>管理者が確認するまでお待ちください。</p>
       </div>
     </div>
   </main>
   <footer>
     <div class="content">
       <a href="inquiry.html">お問い合わせ</a>
-      <p>© 2022 reikitu</p>
+      <p class="center">© 2022 reikitu</p>
     </div>
   </footer>
 </body>

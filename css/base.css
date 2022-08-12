@@ -36,6 +36,13 @@ footer {
 
 p {
   padding: 5px;
+}
+
+p.center {
+  text-align: center;
+}
+
+p.left {
   text-align: left;
 }
 
@@ -45,6 +52,7 @@ p {
   margin: 0 auto;
   width: 90%;
   max-width: 1000px;
+  z-index: 1;
 }
 
 .fadeIn {
