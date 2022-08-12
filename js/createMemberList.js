@@ -24,9 +24,4 @@
 		//img.src = "https://drive.google.com/uc?export=view&id=" + _data.ImageID + "&usp=sharing";
 		parallax.appendChild(img);
 	});
-	/*
-	let dummy = document.createElement("div");
-	dummy.classList.add("parallax");
-	dummy.style.height = "100vh"
-	target.appendChild(dummy);*/
 }
