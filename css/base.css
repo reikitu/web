@@ -35,7 +35,7 @@ footer {
 }
 
 p {
-  padding: 5px 0;
+  padding: 5px;
 }
 
 .content {
@@ -125,7 +125,7 @@ p {
   position: relative;
   display: inline-block;
   padding: 10px 25px 10px 5px;
-  margin: 2px 0;
+  margin: 2px;
   color: #313131;
   transition: .3s ease-in-out;
   text-decoration: none;
