@@ -17,6 +17,20 @@
 		p.style.textAlign = "left";
 		p.innerText = data.message;
 		content.appendChild(p);
+		if (data.twitch) {
+			let twitch = document.createElement("a");
+			twitch.classList.add("linkButton");
+			twitch.href = "https://www.twitch.tv/" + data.twitch;
+			twitch.innerText = "Twitch";
+			content.appendChild(twitch);
+		}
+		if (data.twitter) {
+			let twitter = document.createElement("a");
+			twitter.classList.add("linkButton");
+			twitter.href = "https://twitter.com/" + data.twitter;
+			twitter.innerText = "Twitter";
+			content.appendChild(twitter);
+		}
 
 		let img = document.createElement("img");
 		let filename = data.filename ? data.filename : "no_image";
