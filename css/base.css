@@ -163,6 +163,43 @@ p.left {
   right: 7px;
 }
 
+.parallax {
+  position: sticky;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  top: 50px;
+  height: 100vh;
+  align-items: center;
+}
+
+.parallax h2 {
+  width: 100%;
+  margin: -50px 0 20px 0;
+}
+
+.parallax_content,
+.parallax img {
+  display: inline-block;
+  width: 45%;
+  max-width: 500px;
+}
+
+.parallax img {
+  border: 5px solid;
+  border-color: #fefecf;
+  aspect-ratio: 1/1;
+}
+
+.parallax:nth-of-type(1) {
+  background-color: #cce4ff;
+}
+
+.parallax:nth-of-type(2) {
+  background-color: #ffd9fe;
+}
+
 @media screen and (min-width: 700px) {
   #navigation {
     position: fixed;
