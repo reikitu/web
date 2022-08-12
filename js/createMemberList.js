@@ -5,10 +5,10 @@
 		parallax.classList.add("parallax");
 		target.appendChild(parallax);
 
-		let h2 = document.createElement("h2");
-		h2.style.textAlign = "center";
-		h2.textContent = data.name;
-		parallax.appendChild(h2);
+		let name = document.createElement("h2");
+		name.style.textAlign = "center";
+		name.textContent = data.name;
+		parallax.appendChild(name);
 
 		let content = document.createElement("div");
 		content.classList.add("parallax_content");
@@ -18,10 +18,15 @@
 		p.innerText = data.message;
 		content.appendChild(p);
 
-		let filename = data.filename ? data.filename : "no_image";
 		let img = document.createElement("img");
+		let filename = data.filename ? data.filename : "no_image";
 		img.src = "img/member/" + filename + ".png";
 		//img.src = "https://drive.google.com/uc?export=view&id=" + _data.ImageID + "&usp=sharing";
 		parallax.appendChild(img);
 	});
+	/*
+	let dummy = document.createElement("div");
+	dummy.classList.add("parallax");
+	dummy.style.height = "100vh"
+	target.appendChild(dummy);*/
 }

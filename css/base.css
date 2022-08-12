@@ -176,14 +176,14 @@ p.left {
 
 .parallax h2 {
   width: 100%;
-  margin: -50px 0 20px 0;
+  margin-top: -50px;
 }
 
 .parallax_content,
 .parallax img {
   display: inline-block;
   width: 45%;
-  max-width: 500px;
+  max-width: 400px;
 }
 
 .parallax img {
